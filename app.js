@@ -13,6 +13,7 @@ const passport = require("passport");
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require("bcryptjs");
 const User = require("./models/User");
+const MongoStore = require("connect-mongo")(session);
 
 
 mongoose
@@ -37,7 +38,10 @@ const app = express();
 
 // Middleware Setup
 app.use(session({
-  secret: "cats"
+  secret: "cats",
+  resave: true,
+  saveUninitialized: true,
+  store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
 app.use(logger("dev"));

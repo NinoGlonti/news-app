@@ -16,7 +16,7 @@ const User = require("./models/User");
 
 
 mongoose
-  .connect("mongodb://localhost/webapp", {
+.connect(process.env.MONGODB_URI || "mongodb://localhost/webapp", {
     useNewUrlParser: true
   })
   .then(x => {

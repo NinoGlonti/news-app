@@ -1,0 +1,49 @@
+<div class="editContainer">
+  <div class="edit-profile-containers">
+    <h2>Your categories</h2>
+    <div class="tag-cloud">
+      {{#each categories}}
+      <span class="pref">{{this}}</span>
+      {{/each}}
+    </div>
+  </div>
+  <div class="edit-profile-containers">
+    <p>Add category</p>
+    <input type="text" name="categories" id="categories" placeholder="Add categories..." onkeyup="handleChange()">
+  </div>
+</div>
+<script>
+  document.querySelector('#categories').onkeyup = function (e) {
+    if (e.keyCode == 13) {
+      let newTag = document.createElement('span')
+      newTag.className = 'pref';
+      newTag.innerHTML = document.querySelector('#categories').value;
+      newTag.addEventListener('click', () => {
+        console.log(newTag.innerHTML)
+        newTag.parentNode.removeChild(newTag);
+        axios.post('/edit/removeTag', { categories: newTag.innerHTML }).then(response => {
+          console.log(response.data)
+        }).catch(err => console.log(err))
+      })
+      let parent = document.querySelector(".tag-cloud")
+      parent.appendChild(newTag);
+      document.querySelector('#categories').value = '';
+      //const list = document.querySelectorAll('.pref')
+      //const cat = Object.values(list).map(x => x.innerHTML)
+      //console.log(cat)
+      axios.post('/edit/addTag', { categories: newTag.innerHTML }).then(response => {
+        console.log(response.data)
+      }).catch(err => console.log(err))
+    }
+  }
+  document.querySelectorAll('.pref').forEach(x => {
+    //var elem = document.querySelector('#some-element');
+    x.addEventListener('click', () => {
+      console.log(x.innerHTML)
+      x.parentNode.removeChild(x);
+      axios.post('/edit/removeTag', { categories: x.innerHTML }).then(response => {
+        console.log(response.data)
+      }).catch(err => console.log(err))
+    })
+  })
+</script>

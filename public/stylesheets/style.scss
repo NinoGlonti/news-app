@@ -1,0 +1,152 @@
+body {
+
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #00B7FF;
+}
+
+
+
+.pref {
+	//background-color: lightblue;
+	padding: 6px;
+	border-radius: 8px;
+	border: solid 2px lightblue;
+	// margin: 20px;
+	cursor: pointer;
+  }
+  .tag-cloud{
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+  }
+  .edit-profile-containers{
+	margin-bottom: 50px;
+  }
+
+
+
+.particle {
+	position: absolute;
+	border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+
+	.particle:nth-child(#{$i}) {
+		animation: particle-animation-#{$i} 60s infinite;
+		$size: random(5) + 5 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+	}
+}
+
+h2 {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 2.5rem;
+	margin-right: 4em;
+}
+
+h4 {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 5.3em;
+}
+
+.netzImage {
+	width: 200px;
+    height: 120px;
+}
+.netzImage img {
+	width: 100%;
+    height: auto;
+}
+.nav-bar {
+	background-color: aquamarine;
+	margin: 0;
+	height: 12vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	input {
+		background-color: red !important;
+		border: none;
+	}
+}
+
+.name {
+	padding: 20px;
+
+}
+
+.name input {
+	background-color: #ffffff;
+}
+
+
+.loginBtn {
+	margin-top: 0.9rem;
+	padding: 1.5rem;
+}
+
+.signUp {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.signInputs {
+	padding: 0 8rem;
+	align-items: space-between;
+}
+
+
+#formHP {
+	width: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	input {
+		width: 80%;
+		padding: 5px 10px;
+	}
+
+	div {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		margin: 0.75rem 0;
+
+		input {
+			width: 100%;
+			background-color: white;
+			color: black;
+			border: 0.2px solid black
+		}
+	}
+	
+	.bestButtonEver {
+		margin: 0;
+		padding: 0;
+		width: 80%
+	}
+}
+

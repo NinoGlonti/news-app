@@ -1,0 +1,94 @@
+<div id="particle-container">
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+
+{{#if message}}
+<p class="error-message">{{message}}</p>
+{{/if}}
+
+{{!--<div class="netzImage">
+<img  src="/images/netzright.png" alt="">
+</div>
+--}}
+
+<div class="nav-bar">
+
+  <div class="name">
+    <form action="/login" method="post">
+      <span>Username</span> <br>
+      <input name="username" type="text" placeholder="Username">
+      
+  </div>
+
+  <div class="pass">
+    <span>Password</span> <br>
+    <input name="password" type="password" placeholder="********">
+  </div>
+  <div class="loginBtn">
+    <button>Log In</button>
+  </div>
+  </form>
+</div>
+
+{{!----SIGN UP ----}}
+
+<h2>Create new account</h2> <br>
+<h4>It's very easy</h4>
+
+
+<div class="signUp">
+
+  <div class="signInputs">
+    <form id="formHP" action="/signup" method="POST">
+      <div class="anotherDiv">
+
+        <div>
+          <input name="username" type="text" placeholder="Username">
+        </div>
+        <div>
+          <input name="password" type="password" placeholder="********">
+        </div>
+        <div>
+          <input name="email" type="text" placeholder="email adress">
+        </div>
+
+        <div>
+          <span>Birthday</span><br>
+          <input name="birthday" type="Date">
+        </div>
+      </div>
+      <button class="bestButtonEver">Sign up</button>
+    </form>
+
+    {{!-- <a href="/google">Sign up with Google</a>--}}
+
+  </div>

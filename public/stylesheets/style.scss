@@ -1,12 +1,16 @@
-body {
+* {
+	margin: 0;
+	padding: 0
+}
 
+body {
+    //padding: 0 100px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
 	color: #00B7FF;
 }
-
 
 
 .pref {
@@ -52,101 +56,8 @@ a {
 	}
 }
 
-h2 {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 2.5rem;
-	margin-right: 4em;
-}
+.bg{
+	background-image: url(/images/netzright.png);
+  }
 
-h4 {
-	display: flex;
-	justify-content: flex-end;
-	margin-right: 5.3em;
-}
-
-.netzImage {
-	width: 200px;
-    height: 120px;
-}
-.netzImage img {
-	width: 100%;
-    height: auto;
-}
-.nav-bar {
-	background-color: aquamarine;
-	margin: 0;
-	height: 12vh;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-
-	input {
-		background-color: red !important;
-		border: none;
-	}
-}
-
-.name {
-	padding: 20px;
-
-}
-
-.name input {
-	background-color: #ffffff;
-}
-
-
-.loginBtn {
-	margin-top: 0.9rem;
-	padding: 1.5rem;
-}
-
-.signUp {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.signInputs {
-	padding: 0 8rem;
-	align-items: space-between;
-}
-
-
-#formHP {
-	width: 20rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	input {
-		width: 80%;
-		padding: 5px 10px;
-	}
-
-	div {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		margin: 0.75rem 0;
-
-		input {
-			width: 100%;
-			background-color: white;
-			color: black;
-			border: 0.2px solid black
-		}
-	}
-	
-	.bestButtonEver {
-		margin: 0;
-		padding: 0;
-		width: 80%
-	}
-}
-
+  

@@ -19,12 +19,14 @@ router.get("/", (req, res, next) => {
 router.get('/preferences', (req, res, next) => {
   getTopHeadlines()
     .then(data => {
+      
       let categories = data.sources.map(x => {
         return x.category
       })
+      let chosen = data.sources.slice(0,20)
       let uniCategories = [...new Set(categories)];
       res.render('preferences', {
-        data,
+        data: chosen,
         uniCategories
       });
     })

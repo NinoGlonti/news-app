@@ -1,94 +1,102 @@
 <div id="particle-container">
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
-  <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
 </div>
+<nav class="navbar navbar-light bg-light ml-3 mt-3">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="/images/filters-icon.png" width="50" height="50" class="d-inline-block align-top mr-2 font-weight-bold" alt="">
+    <p class="mt-3">FYN</p> 
+  </a>
+  
+    
 
-{{#if message}}
-<p class="error-message">{{message}}</p>
-{{/if}}
-
-{{!--<div class="netzImage">
-<img  src="/images/netzright.png" alt="">
-</div>
---}}
-
-<div class="nav-bar">
-
-  <div class="name">
-    <form action="/login" method="post">
-      <span>Username</span> <br>
-      <input name="username" type="text" placeholder="Username">
-      
-  </div>
-
-  <div class="pass">
-    <span>Password</span> <br>
-    <input name="password" type="password" placeholder="********">
-  </div>
-  <div class="loginBtn">
-    <button>Log In</button>
-  </div>
+  <span class="font-weight-bold" style="font-size: 18px;" >CUSTOMIZE THE HOME PAGE AND MAKE IT YOURS</span>
+  
+ 
+  <form action="/login" class="form-block mr-5"  method="post">
+    <input class="form-control mr-sm-2 mb-2" name="username" type="search" placeholder="Username" aria-label="Search">
+    <input class="form-control mr-sm-2 mb-2" name="password" type="password" placeholder="Password" aria-label="Search">
+   <input type="submit" class="btn btn-outline-info" value="LOGIN"/>
   </form>
+
+</nav>
+  
+<div class="d-flex flex-column align-items-end mt-5 mb-2 mr-5">
+  <p class="font-weight-bold" style="font-size: 25px;">You don't have an account yet?</p>
+  <p  style="font-size: 25px;">Sign up now it's easy and quick !!</>
 </div>
-
-{{!----SIGN UP ----}}
-
-<h2>Create new account</h2> <br>
-<h4>It's very easy</h4>
-
-
-<div class="signUp">
-
-  <div class="signInputs">
-    <form id="formHP" action="/signup" method="POST">
-      <div class="anotherDiv">
-
-        <div>
-          <input name="username" type="text" placeholder="Username">
-        </div>
-        <div>
-          <input name="password" type="password" placeholder="********">
-        </div>
-        <div>
-          <input name="email" type="text" placeholder="email adress">
-        </div>
-
-        <div>
-          <span>Birthday</span><br>
-          <input name="birthday" type="Date">
-        </div>
-      </div>
-      <button class="bestButtonEver">Sign up</button>
-    </form>
-
-    {{!-- <a href="/google">Sign up with Google</a>--}}
-
+<div class="d-flex justify-content-between row mt-4">
+  <div >
+<img src="/images/network.png" class="pb-0" width="600" height="600" alt="">
   </div>
+  <div class="mr-5 w-25 p-3">
+  <form id="form" action="/signup" method="POST">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+      </div>
+      <input name="username" type="text" class="form-control" placeholder="Username" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+      </div>
+      <input name="password" type="password" class="form-control" placeholder="********"
+        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
+      </div>
+      <input name="email" type="text" class="form-control" placeholder="@example.com" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Birthday</span>
+      </div>
+      <input name="birthday" type="Date" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="submit" class="btn btn-outline-info mb-3 mt-3">CREATE ACCOUNT</button>
+  </form>
+  <button class="btn btn-outline-info"><a href="/google" style="color:#5bc0de;">SIGN UP WITH GOOGLE</a></button>
+  </div>
+  </div>
+</div>
+{{#if message}}
+<div class="p-3 mt-3 mb-1 btn btn-danger">
+<span class="error-message font-weight-bold">{{message}}</span>
+</div>
+{{/if}}
+</div>
+</div>
